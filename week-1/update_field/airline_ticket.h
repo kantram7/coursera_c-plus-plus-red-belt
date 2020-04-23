@@ -10,9 +10,9 @@ struct Date {
 
   friend ostream& operator<<(ostream& out, const Date& date) {
 	  out << '['
-			  << setw(2) << setfill('0')
-			  << date.day <<  '-' << setw(2) << setfill('0')
-			  << date.month << '-' << setw(4) << setfill('0') << date.year << ']';
+		  << setw(2) << setfill('0')
+		  << date.day <<  '-' << setw(2) << setfill('0')
+         	  << date.month << '-' << setw(4) << setfill('0') << date.year << ']';
 	  return out;
   }
 
@@ -23,13 +23,13 @@ struct Date {
   }
 
   friend istream& operator>> (istream& is, Date& dt) {
-	  is >> dt.year;
-	  is.ignore(1);
-      is >> dt.month;
-      is.ignore(1);
-      is >> dt.day;
-      return is;
-	}
+ 	is >> dt.year;
+	is.ignore(1);
+        is >> dt.month;
+        is.ignore(1);
+        is >> dt.day;
+        return is;
+  }
 };
 
 bool operator<(const Date& first, const Date& second) {
