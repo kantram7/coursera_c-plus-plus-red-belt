@@ -6,10 +6,10 @@ using namespace std;
 
 // Реализуйте этот макрос, а также необходимые операторы для классов Date и Time
 #define UPDATE_FIELD(ticket, field, values) { 			\
-	auto key = values.find(#field);						     		\
-	if(key != values.end()) {						        			\
-		istringstream ss(key->second);				    			\
-		ss >> ticket.field;									          	\
+	auto key = values.find(#field);				\
+	if(key != values.end()) {				\
+		istringstream ss(key->second);			\
+		ss >> ticket.field;				\
 	}														                    	\
 }
 
